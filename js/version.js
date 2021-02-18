@@ -1,1 +1,1 @@
-0.0.1
+let nsbVersion = 0.0.2;
