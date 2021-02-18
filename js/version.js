@@ -1,1 +1,1 @@
-let nsbVersion = 0.0.2;
+let nsbVersion = 0.0.3;
