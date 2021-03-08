@@ -22,13 +22,16 @@ read version
 echo $version > version.properties
 
 echo "Bumping to version $version ***********************************************\n"
-git commit -am "Bumped version to v$version"
+git commit -a -m "Bumped version to v$version"
+
+echo "Pushing version commit to main branch ..........${normal}"
+git push origin main
 
 echo "Tagging version to $version ***********************************************\n"
 git tag -a v$version -m "Bumped version to v$version"
 
 echo "Pushing changes into main branch ******************************************\n"
-git push origin main
+git push origin v$version
 
 echo "Switching to staging branch ***********************************************\n"
 git checkout staging
